@@ -1,5 +1,5 @@
-import { StatusBar } from 'expo-status-bar'
-import { Button, Text } from 'react-native'
+import { StatusBar } from 'expo-status-bar';
+import { Button, Text } from 'react-native';
 
 export const Home = (): JSX.Element => {
   return (
@@ -7,7 +7,7 @@ export const Home = (): JSX.Element => {
       <Text>Alo monsieur</Text>
       <Button
         onPress={() => {
-          console.log('Alo')
+          console.log('Alo');
         }}
         title="Learn More"
         color="#841584"
@@ -15,5 +15,5 @@ export const Home = (): JSX.Element => {
       />
       <StatusBar style="auto" />
     </>
-  )
-}
+  );
+};

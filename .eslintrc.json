@@ -11,7 +11,9 @@
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript"
   ],
   "overrides": [],
   "parserOptions": {
@@ -22,6 +24,20 @@
     "sourceType": "module",
     "project": ["./tsconfig.json"]
   },
-  "plugins": ["react", "react-native"],
-  "rules": {}
+  "plugins": ["react", "react-native", "import"],
+  "rules": {
+    "import/namespace": 2
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": true,
+      "node": true
+    },
+    "react": {
+      "createClass": "createReactClass",
+      "pragma": "React",
+      "fragment": "Fragment",
+      "version": "detect"
+    }
+  }
 }
