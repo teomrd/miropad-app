@@ -2,6 +2,9 @@ MAKE_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
 .DEFAULT_GOAL := dev
 
+NODE_OPTIONS=--openssl-legacy-provider
+export
+
 .PHONY : install dev
 
 install:
