@@ -5,13 +5,13 @@ MAKE_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 .PHONY : install dev
 
 install:
-	pnpm install
+	yarn install
 
 type-check:
 	npx tsc
 
 lint:
-	pnpm run lint
+	yarn run lint
 
 checks: type-check lint
 
