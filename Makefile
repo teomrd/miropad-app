@@ -5,12 +5,15 @@ MAKE_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 .PHONY : install dev
 
 install:
-	npm install
+	pnpm install
 
 type-check:
 	npx tsc
 
-checks: type-check
+lint:
+	pnpm run lint
+
+checks: type-check lint
 
 dev: install
 	npx expo start
